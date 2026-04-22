@@ -20,7 +20,6 @@ public class MainAuto {
 
         // hashCode()
         System.out.println("HashCode auto1: " + auto1.hashCode());
-        System.out.println("HashCode officina: " + officina.hashCode());
 
 
         // Stampo l'elenco delle auto in officina
