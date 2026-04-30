@@ -18,9 +18,15 @@ public class Utente implements Iscritto {
         return email;
     }
 
-    @Override //implementazione del metodo update dell'interfaccia Iscritto
-    public void update(String messaggio) {
-        System.out.println("Notifica per " + nome + ": " + messaggio);
+    @Override //override del metodo equals per confrontare utenti basati su nome ed email
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        Utente utente = (Utente) obj;
+
+        if (!nome.equals(utente.nome)) return false;
+        return email.equals(utente.email);
     }
 
 }
